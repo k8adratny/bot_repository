@@ -4,9 +4,8 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.types import Message
 import requests
+from settings import BOT_TOKEN, OPENWEATHER_API_KEY
 
-BOT_TOKEN = "8101017646:AAG7gFs5EYGcWQ7p4jBNyUk3BkLKH0Cji9Q"
-OPENWEATHER_API_KEY = "52c5e033a88c73d34e9df3c995882a5e"
 
 logging.basicConfig(level=logging.INFO)
 
