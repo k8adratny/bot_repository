@@ -44,11 +44,11 @@ async def get_weather(message: types.Message):
 
         # Формируем ответ
         weather_info = (
-            f"🌆 Город: {city}\n"
-            f"🌡 Температура: {temp}°C (ощущается как {feels_like}°C)\n"
-            f"☁ Погода: {weather_desc.capitalize()}\n"
-            f"💧 Влажность: {humidity}%\n"
-            f"🌬 Ветер: {wind_speed} м/с"
+            f"Город: {city}\n"
+            f"Температура: {temp}°C (ощущается как {feels_like}°C)\n"
+            f"Погода: {weather_desc.capitalize()}\n"
+            f"Влажность: {humidity}%\n"
+            f"Ветер: {wind_speed} м/с"
         )
 
         await message.answer(weather_info)
