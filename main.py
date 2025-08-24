@@ -16,7 +16,7 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     await message.answer(
-        "Привет! 👋 Я бот, который показывает погоду.\n"
+        "Привет! Я бот, который показывает погоду.\n"
         "Просто напиши название города, и я пришлю текущую температуру и погоду."
     )
 
@@ -32,7 +32,7 @@ async def get_weather(message: types.Message):
         # Проверка на ошибки
         if response.get("cod") != 200:
             error_msg = response.get("message", "Неизвестная ошибка")
-            await message.answer(f"❌ Ошибка: {error_msg.capitalize()}")
+            await message.answer(f"Ошибка: {error_msg.capitalize()}")
             return
 
         # Парсим данные
@@ -54,7 +54,7 @@ async def get_weather(message: types.Message):
         await message.answer(weather_info)
 
     except Exception as e:
-        await message.answer("❌ Произошла ошибка. Попробуйте позже или проверьте название города.")
+        await message.answer("Произошла ошибка. Попробуйте позже или проверьте название города.")
 
 # Запуск бота
 async def main():
